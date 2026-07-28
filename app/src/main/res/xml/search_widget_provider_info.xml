@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AppWidget provider info for the Brows search bar widget.
+    
+    Chrome-style 4×1 pill, horizontally resizable.
+    Dimensions follow the guide:
+      - minWidth 250dp (fills most home screens at default size)
+      - minHeight 56dp (matches the 56dp bar height)
+      - targetCellWidth 4, targetCellHeight 1 (fills one row)
+      - resizeMode horizontal only (pill shape, no vertical resize)
+      - updatePeriodMillis 0 (static widget, no periodic updates needed)
+-->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="250dp"
+    android:minHeight="56dp"
+    android:minResizeWidth="180dp"
+    android:minResizeHeight="56dp"
+    android:targetCellWidth="4"
+    android:targetCellHeight="1"
+    android:updatePeriodMillis="0"
+    android:initialLayout="@layout/search_widget"
+    android:resizeMode="horizontal"
+    android:widgetCategory="home_screen"
+    android:previewImage="@drawable/bg_search_bar_rounded"
+    android:description="@string/widget_description" />

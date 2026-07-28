@@ -1,0 +1,234 @@
+<resources>
+    <string name="app_name">Brows</string>
+    <string name="title_history">History</string>
+    <string name="title_bookmarks">Bookmarks</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_tabs">Tabs</string>
+
+    <string name="hint_search_url">Search or type URL</string>
+    <string name="action_back">Back</string>
+    <string name="action_forward">Forward</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_home">Home</string>
+    <string name="action_menu">Menu</string>
+    <string name="action_tabs">Tabs</string>
+    <string name="desc_secure_connection">Secure connection</string>
+    <string name="action_history">History</string>
+    <string name="action_bookmarks">Bookmarks</string>
+    <string name="action_bookmark_page">Bookmark this page</string>
+    <string name="action_share">Share</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_new_tab">New tab</string>
+    <string name="action_done">Done</string>
+    <string name="action_close_tab">Close tab</string>
+    <string name="action_find_in_page">Find in page</string>
+    <string name="action_desktop_mode">Request desktop site</string>
+    <string name="action_download_link">Download link</string>
+    <string name="action_downloads">Downloads</string>
+    <string name="action_reader_mode">Reader mode</string>
+    <string name="reader_mode_enabled">Reader mode on — page chrome hidden</string>
+    <string name="reader_mode_disabled">Reader mode off</string>
+
+    <string name="link_open_new_tab">Open in new tab</string>
+    <string name="link_open_bg_tab">Open in background tab</string>
+    <string name="link_copy">Copy link address</string>
+    <string name="link_share">Share link</string>
+    <string name="link_download">Download link</string>
+
+    <string name="empty_history">No browsing history yet</string>
+    <string name="empty_bookmarks">No bookmarks yet</string>
+    <string name="empty_tabs">No open tabs</string>
+    <string name="history_locked">History is permanently recorded and cannot be cleared</string>
+
+    <!-- Settings: sections -->
+    <string name="settings_category_default_browser">Default browser</string>
+    <string name="settings_category_browsing">Browsing</string>
+    <string name="settings_category_privacy">Privacy &amp; security</string>
+    <string name="settings_category_about">About</string>
+
+    <!-- Settings: default browser -->
+    <string name="settings_set_default_browser">Set as default browser</string>
+    <string name="settings_default_browser_status_default">Default</string>
+    <string name="settings_default_browser_status_not_default">Not set</string>
+    <string name="settings_default_browser_summary_default">Brows is your default browser</string>
+    <string name="settings_default_browser_summary_not_default">Open links automatically in Brows</string>
+
+    <!-- Settings: browsing -->
+    <string name="settings_homepage">Homepage</string>
+    <string name="settings_search_engine">Search engine</string>
+    <string name="settings_javascript">Enable JavaScript</string>
+    <string name="settings_block_popups">Block pop-up windows</string>
+    <string name="settings_desktop_mode">Request desktop sites</string>
+    <string name="settings_new_tab_page">New tab page</string>
+    <string name="settings_new_tab_page_summary">Opens when you tap +</string>
+    <string name="settings_new_tab_page_dialog_title">New tab page URL</string>
+
+    <!-- Settings: privacy -->
+    <string name="settings_permanent_history">Permanent history</string>
+    <string name="settings_permanent_history_summary">Every page visit is recorded and cannot be erased</string>
+    <string name="settings_no_incognito">No incognito mode</string>
+    <string name="settings_no_incognito_summary">Private browsing is structurally unavailable</string>
+
+    <!-- Settings: ad block (comprehensive Brave-level) -->
+    <string name="settings_ad_block">Block ads &amp; trackers</string>
+    <string name="settings_ad_block_summary_on">Shield active — blocking ads, trackers &amp; annoyances</string>
+    <string name="settings_ad_block_summary_off">Shield disabled — no filtering active</string>
+    <string name="settings_ad_block_stats">%1$s trackers &amp; ads blocked</string>
+    <string name="settings_ad_block_stats_session">%1$s blocked this session</string>
+    <string name="settings_ad_block_blocked_count">%1$d blocked</string>
+    <string name="settings_ad_block_categories">Category filters</string>
+    <string name="settings_ad_block_category_ads">Advertising</string>
+    <string name="settings_ad_block_category_ads_desc">Banner ads, video ads, pop-ups, sponsored content</string>
+    <string name="settings_ad_block_category_trackers">Trackers</string>
+    <string name="settings_ad_block_category_trackers_desc">Cross-site tracking, cookie syncing, retargeting</string>
+    <string name="settings_ad_block_category_analytics">Analytics</string>
+    <string name="settings_ad_block_category_analytics_desc">Site analytics, session recording, A/B testing</string>
+    <string name="settings_ad_block_category_social">Social trackers</string>
+    <string name="settings_ad_block_category_social_desc">Social media widgets, share buttons, embedded posts</string>
+    <string name="settings_ad_block_category_fingerprint">Fingerprinting</string>
+    <string name="settings_ad_block_category_fingerprint_desc">Browser/device fingerprinting, bot detection scripts</string>
+    <string name="settings_ad_block_category_crypto">Crypto miners</string>
+    <string name="settings_ad_block_category_crypto_desc">Coinhive, cryptoloot, and other in-browser miners</string>
+    <string name="settings_ad_block_category_popups">Pop-up &amp; redirect</string>
+    <string name="settings_ad_block_category_popups_desc">Pop-under ads, fake download buttons, link shorteners</string>
+    <string name="settings_ad_block_category_annoyances">Annoyances</string>
+    <string name="settings_ad_block_category_annoyances_desc">Newsletter popups, cookie banners, chat widgets, sticky elements</string>
+    <string name="settings_ad_block_category_malware">Malware</string>
+    <string name="settings_ad_block_category_malware_desc">Known malware, phishing, ransomware, exploit kits</string>
+    <string name="settings_ad_block_category_content_farm">Content farms</string>
+    <string name="settings_ad_block_category_content_farm_desc">Low-quality content, clickbait, AI-generated spam</string>
+    <string name="settings_ad_block_category_other">Other</string>
+    <string name="settings_ad_block_category_other_desc">Telemetry, diagnostic reporting, misc trackers</string>
+    <string name="settings_ad_block_https_upgrade">Upgrade to HTTPS</string>
+    <string name="settings_ad_block_https_upgrade_desc">Auto-upgrade HTTP to HTTPS for safe domains</string>
+    <string name="settings_ad_block_cosmetic">Cosmetic filters</string>
+    <string name="settings_ad_block_cosmetic_desc">Hide visual ad/tracker elements on pages</string>
+    <string name="settings_ad_block_advanced">Advanced ad blocking</string>
+    <string name="settings_ad_block_advanced_desc">Category toggles, HTTPS upgrade, cosmetic filters</string>
+    <string name="settings_ad_block_reset_stats">Reset stats</string>
+    <string name="settings_ad_block_reset_stats_confirm">Reset all blocking statistics? This cannot be undone.</string>
+    <string name="settings_ad_block_domain_count">~2,500 domains blocked</string>
+
+    <!-- Settings: about -->
+    <string name="settings_version">Version</string>
+    <string name="settings_no_clear_data">This browser intentionally has NO option to clear browsing data.</string>
+
+    <!-- Search engine options -->
+    <string name="search_engine_duckduckgo">DuckDuckGo</string>
+    <string name="search_engine_google">Google</string>
+    <string name="search_engine_bing">Bing</string>
+    <string name="search_engine_startpage">Startpage</string>
+
+    <string name="default_homepage">https://duckduckgo.com/</string>
+    <string name="new_tab_blank">New tab</string>
+
+    <string name="tab_count_format">%d</string>
+    <string name="open_tabs_count">%d open tabs</string>
+
+    <!-- Default browser errors / fallbacks -->
+    <string name="default_browser_unsupported">This Android version does not support in-app default browser selection. Open Settings → Apps → Default apps to set it manually.</string>
+
+    <!-- Find in page -->
+    <string name="find_hint">Find in page</string>
+    <string name="find_result_format">%1$d / %2$d</string>
+    <string name="find_no_results">No results</string>
+
+    <!-- History search -->
+    <string name="history_search_hint">Search history</string>
+
+    <!-- Download -->
+    <string name="download_started">Download started</string>
+    <string name="download_failed">Download failed</string>
+
+    <!-- Tab persistence -->
+    <string name="tabs_restored">Tabs restored</string>
+
+    <!-- Bookmark folders + export / import -->
+    <string name="bookmarks_folder_all">All</string>
+    <string name="bookmarks_new_folder">New folder</string>
+    <string name="bookmarks_move_to_folder">Move to folder…</string>
+    <string name="bookmarks_edit_title">Edit title</string>
+    <string name="bookmarks_delete">Delete</string>
+    <string name="bookmarks_export">Export bookmarks</string>
+    <string name="bookmarks_import">Import bookmarks</string>
+    <string name="bookmarks_exported_to">Exported to: %1$s</string>
+    <string name="bookmarks_imported_count">Imported %1$d bookmarks</string>
+    <string name="bookmarks_import_failed">Import failed: %1$s</string>
+    <string name="bookmarks_folder_name">Folder name</string>
+    <string name="bookmarks_move_none">None (root)</string>
+    <string name="bookmarks_move_new_folder">New folder…</string>
+
+    <!-- Per-site permission manager -->
+    <string name="title_permissions">Site permissions</string>
+    <string name="action_site_permissions">Site permissions</string>
+    <string name="perms_card_title">Per-site permissions</string>
+    <string name="perms_clear_all_btn">Revoke all</string>
+    <string name="perms_clear_all_title">Revoke all web permissions?</string>
+    <string name="perms_clear_all_message">All per-site grants (camera, microphone, location, notifications) will be removed. Browsing history is not affected.</string>
+    <string name="perms_clear_all_confirm">Revoke all</string>
+    <string name="perms_summary_empty">No sites have been granted any web permission yet. When a site requests camera, microphone, location, or notification access, it will appear here.</string>
+    <string name="perms_summary_count">%1$d site(s) with active grants out of %2$d total.</string>
+    <string name="perms_empty_title">No granted permissions</string>
+    <string name="perms_empty_body">When a website requests camera, microphone, location, or notification access and you grant it, the site will appear here so you can review or revoke the grant at any time.</string>
+    <string name="perms_row_hint">Tap a chip to toggle the grant for this site.</string>
+    <string name="perms_revoke_btn">Revoke</string>
+    <string name="perms_revoke_origin_title">Revoke all permissions for this site?</string>
+    <string name="perms_revoke_origin_message">All grants for %1$s will be removed. Browsing history is not affected.</string>
+    <string name="perms_revoke_origin_confirm">Revoke</string>
+    <string name="perms_footer_note">Toggling a permission here only affects web-level grants. System-level permissions (e.g. Camera, Microphone) must also be granted in Android Settings → Apps → Brows. History is never affected.</string>
+    <string name="cancel">Cancel</string>
+    <string name="perms_dialog_title">Site permission request</string>
+    <string name="perms_dialog_message">%1$s wants to use: %2$s. Allow?</string>
+    <string name="perms_dialog_allow">Allow</string>
+    <string name="perms_dialog_deny">Deny</string>
+
+    <!-- Per-site JavaScript toggle -->
+    <string name="action_site_javascript">Site JavaScript</string>
+    <string name="js_toggle_title">JavaScript on this site</string>
+    <string name="js_toggle_summary">Allow this site to run JavaScript</string>
+    <string name="js_toggle_on">JavaScript enabled</string>
+    <string name="js_toggle_off">JavaScript disabled — reload to apply</string>
+
+    <!-- Bookmark drag-and-drop reordering (Round 12) -->
+    <string name="bookmark_drag_hint">Drag to reorder</string>
+
+    <!-- Screenshot capture (Round 12) -->
+    <string name="action_screenshot">Screenshot</string>
+    <string name="screenshot_saved">Screenshot saved to Pictures/Screenshots</string>
+    <string name="screenshot_failed">Screenshot failed</string>
+
+    <!-- Download page (offline save) -->
+    <string name="action_download_page">Download page</string>
+    <string name="download_page_started">Downloading page…</string>
+    <string name="download_page_failed">Download failed</string>
+    <string name="download_page_no_url">No page loaded</string>
+    <string name="download_page_saved">Page saved to Downloads</string>
+
+    <!-- Bookmark toggle -->
+    <string name="bookmark_added">Bookmarked</string>
+    <string name="bookmark_removed">Bookmark removed</string>
+
+    <!-- Page translate (Round 12) -->
+    <string name="action_translate">Translate page</string>
+    <string name="translate_title">Translate this page</string>
+    <string name="translate_select_lang">Select target language:</string>
+    <string name="translate_confirm">Translate</string>
+    <string name="translate_no_url">No page is loaded yet — open a website first.</string>
+
+    <!-- Network pre-flight for translate (v0.13) -->
+    <string name="translate_no_network">No network connection — translate requires internet access.</string>
+
+    <!-- Full-page screenshot (v0.13) -->
+    <string name="screenshot_fullpage_saved">Full-page screenshot saved to Pictures/Screenshots</string>
+    <string name="screenshot_too_tall">Page too tall — captured visible viewport instead</string>
+    <string name="screenshot_choice_title">Capture what?</string>
+    <string name="screenshot_choice_viewport">Visible viewport only</string>
+    <string name="screenshot_choice_fullpage">Full page (scrolls &amp; stitches)</string>
+
+    <!-- Home screen search widget (Chrome-style pill) -->
+    <string name="widget_name">Brows Search</string>
+    <string name="widget_search_hint">Search or type web address</string>
+    <string name="widget_description">A quick search bar for your home screen</string>
+    <string name="voice_search">Voice search</string>
+</resources>

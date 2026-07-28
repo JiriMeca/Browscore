@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Chrome-style search bar widget for Brows.
+    
+    Layout: [Brows logo] [hint text ................] [Mic icon]
+    
+    3 clickable zones (each wired via setOnClickPendingIntent in the provider):
+      1. search_bar_container (the whole pill / hint text area) -> opens SearchActivity
+      2. mic_icon (right side)                              -> opens SearchActivity (no voice since not needed)
+      3. logo_icon (left side)                              -> opens the host app (MainActivity)
+    
+    RemoteViews-safe: only LinearLayout, ImageView, TextView are used.
+    All colors are hardcoded hex for RemoteViews compatibility.
+    The hint text takes remaining space with layout_weight="1".
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_bar_container"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_search_bar_rounded"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp">
+
+    <!-- Left logo / brand icon — tapping opens the host app -->
+    <ImageView
+        android:id="@+id/logo_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_widget_logo_24dp"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/app_name" />
+
+    <!-- Hint text "Search or type URL" — takes remaining space -->
+    <TextView
+        android:id="@+id/search_hint_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="14dp"
+        android:text="@string/widget_search_hint"
+        android:textColor="#75767A"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- Mic icon (right) — decorative, tapping also opens SearchActivity -->
+    <ImageView
+        android:id="@+id/mic_icon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/ic_mic"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/widget_search_hint" />
+
+</LinearLayout>

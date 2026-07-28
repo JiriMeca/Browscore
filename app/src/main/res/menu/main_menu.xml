@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ===== Chrome-style overflow menu ordering ===== -->
+
+    <!-- 1. New tab -->
+    <item
+        android:id="@+id/opt_new_tab"
+        android:title="@string/action_new_tab"
+        android:icon="@drawable/ic_add" />
+
+    <!-- 2. History -->
+    <item
+        android:id="@+id/opt_history"
+        android:title="@string/title_history"
+        android:icon="@drawable/ic_history" />
+
+    <!-- 3. Downloads (opens system Downloads app) -->
+    <item
+        android:id="@+id/opt_downloads"
+        android:title="@string/action_downloads"
+        android:icon="@drawable/ic_download" />
+
+    <!-- 4. Bookmarks -->
+    <item
+        android:id="@+id/opt_bookmarks"
+        android:title="@string/title_bookmarks"
+        android:icon="@drawable/ic_bookmark" />
+
+    <!-- 5. Share -->
+    <item
+        android:id="@+id/opt_share"
+        android:title="@string/action_share"
+        android:icon="@drawable/ic_share" />
+
+    <!-- 6. Find in page -->
+    <item
+        android:id="@+id/opt_find_in_page"
+        android:title="@string/action_find_in_page"
+        android:icon="@drawable/ic_search" />
+
+    <!-- 7. Translate page -->
+    <item
+        android:id="@+id/opt_translate"
+        android:title="@string/action_translate"
+        android:icon="@drawable/ic_language" />
+
+    <!-- 8. Reader mode (checkable, like desktop mode) -->
+    <item
+        android:id="@+id/opt_reader_mode"
+        android:title="@string/action_reader_mode"
+        android:icon="@drawable/ic_reader"
+        android:checkable="true" />
+
+    <!-- 9. Download page (save as offline) -->
+    <item
+        android:id="@+id/opt_download_page"
+        android:title="@string/action_download_page"
+        android:icon="@drawable/ic_download" />
+
+    <!-- 10. Desktop mode (checkable, like Chrome) -->
+    <item
+        android:id="@+id/opt_desktop_mode"
+        android:title="@string/action_desktop_mode"
+        android:icon="@drawable/ic_globe"
+        android:checkable="true" />
+
+    <!-- 11. Per-site JavaScript toggle -->
+    <item
+        android:id="@+id/opt_javascript_toggle"
+        android:title="@string/action_site_javascript"
+        android:icon="@drawable/ic_shield" />
+
+    <!-- 12. Per-site permission manager -->
+    <item
+        android:id="@+id/opt_permissions"
+        android:title="@string/action_site_permissions"
+        android:icon="@drawable/ic_shield" />
+
+    <!-- 13. Settings (always last, like Chrome) -->
+    <item
+        android:id="@+id/opt_settings"
+        android:title="@string/action_settings"
+        android:icon="@drawable/ic_settings" />
+</menu>

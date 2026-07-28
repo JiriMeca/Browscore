@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Chrome-style "Find in page" bar. Slides in above the bottom toolbar. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/find_bar"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/browser_bg"
+    android:paddingStart="8dp"
+    android:paddingEnd="4dp"
+    android:visibility="gone"
+    android:elevation="6dp">
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_search"
+        android:importantForAccessibility="no"
+        app:tint="@color/text_hint" />
+
+    <EditText
+        android:id="@+id/find_input"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="6dp"
+        android:hint="@string/find_hint"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:background="@android:color/transparent"
+        android:singleLine="true"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/find_result_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/btn_find_up"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_chevron_up"
+        android:contentDescription="@string/action_back"
+        android:scaleType="center"
+        app:tint="@color/icon_default" />
+
+    <ImageButton
+        android:id="@+id/btn_find_down"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_chevron_down"
+        android:contentDescription="@string/action_forward"
+        android:scaleType="center"
+        app:tint="@color/icon_default" />
+
+    <ImageButton
+        android:id="@+id/btn_find_close"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_close"
+        android:contentDescription="@string/action_done"
+        android:scaleType="center"
+        app:tint="@color/icon_default" />
+</LinearLayout>

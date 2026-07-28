@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <!-- Dark-mode omnibox background — explicit dark color to guarantee the
+         search bar is always dark in night mode, regardless of how the
+         system resolves color qualifiers inside drawable XML. -->
+    <solid android:color="@color/omnibox_bg_dark" />
+    <corners android:radius="20dp" />
+</shape>

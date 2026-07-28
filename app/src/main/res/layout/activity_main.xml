@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/browser_bg"
+    android:fitsSystemWindows="true">
+
+    <!-- ============ Main browser chrome ============ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ===== Top bar: omnibox pill + tabs button + overflow menu (Chrome-style) ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="4dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+
+            <!-- Omnibox pill -->
+            <LinearLayout
+                android:id="@+id/omnibox_container"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_omnibox"
+                android:paddingStart="12dp"
+                android:paddingEnd="6dp">
+
+                <ImageView
+                    android:id="@+id/omnibox_security_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_lock"
+                    android:contentDescription="@string/desc_secure_connection"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/omnibox_search_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_search"
+                    android:contentDescription="@string/hint_search_url" />
+
+                <EditText
+                    android:id="@+id/url_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:hint="@string/hint_search_url"
+                    android:imeOptions="actionGo"
+                    android:inputType="textUri"
+                    android:background="@android:color/transparent"
+                    android:singleLine="true"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="15sp"
+                    android:ellipsize="end" />
+
+                <ImageButton
+                    android:id="@+id/btn_refresh"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_refresh"
+                    android:contentDescription="@string/action_refresh"
+                    android:scaleType="center"
+                    app:tint="@color/icon_default" />
+            </LinearLayout>
+
+            <!-- Tabs button with count badge -->
+            <FrameLayout
+                android:id="@+id/btn_tabs_container"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="2dp"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_new_tab"
+                    android:contentDescription="@string/action_tabs"
+                    app:tint="@color/icon_default" />
+
+                <TextView
+                    android:id="@+id/tab_count_badge"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="end|top"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/bg_tab_badge_blue"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <!-- Overflow menu button (Chrome-style three-dots, next to tabs) -->
+            <ImageButton
+                android:id="@+id/btn_overflow_menu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="2dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_more_vert"
+                android:contentDescription="@string/action_menu"
+                android:scaleType="center"
+                app:tint="@color/icon_default" />
+        </LinearLayout>
+
+        <!-- Thin progress bar (Chrome-style) -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="@color/accent_blue"
+            android:visibility="gone" />
+
+        <!-- Divider line under omnibox -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+        <!-- ===== Suggestion dropdown (shown below omnibox when typing) ===== -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/suggestion_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="260dp"
+            android:background="@color/browser_bg"
+            android:visibility="gone"
+            android:clipToPadding="false"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:elevation="8dp" />
+
+        <!-- ===== WebView container (holds all tab WebViews) ===== -->
+        <FrameLayout
+            android:id="@+id/webview_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/browser_bg" />
+
+        <!-- Divider line above bottom toolbar -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+        <!-- ===== Find in page bar (visibility-toggled) ===== -->
+        <include
+            android:id="@+id/find_bar"
+            layout="@layout/view_find_in_page" />
+
+        <!-- ===== Bottom toolbar ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:background="@color/browser_bg">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                style="@style/BottomBarButton"
+                android:src="@drawable/ic_back"
+                android:contentDescription="@string/action_back"
+                app:tint="@color/icon_default" />
+
+            <ImageButton
+                android:id="@+id/btn_forward"
+                style="@style/BottomBarButton"
+                android:src="@drawable/ic_forward"
+                android:contentDescription="@string/action_forward"
+                app:tint="@color/icon_default" />
+
+            <ImageButton
+                android:id="@+id/btn_home"
+                style="@style/BottomBarButton"
+                android:src="@drawable/ic_home"
+                android:contentDescription="@string/action_home"
+                app:tint="@color/icon_default" />
+
+            <!-- Shield button with blocked-count badge (Brave-style) -->
+            <FrameLayout
+                android:id="@+id/btn_shield_container"
+                style="@style/BottomBarButton"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:id="@+id/btn_shield"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_shield"
+                    android:contentDescription="@string/settings_ad_block"
+                    app:tint="@color/secure_green" />
+
+                <TextView
+                    android:id="@+id/shield_blocked_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|top"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_tab_badge"
+                    android:gravity="center"
+                    android:minWidth="14dp"
+                    android:minHeight="14dp"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="3dp"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/btn_bookmark_page"
+                style="@style/BottomBarButton"
+                android:src="@drawable/ic_bookmark"
+                android:contentDescription="@string/action_bookmark_page"
+                app:tint="@color/icon_default" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ============ Tab switcher overlay (fullscreen) ============ -->
+    <FrameLayout
+        android:id="@+id/tab_switcher_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/browser_bg"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Tab switcher header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp">
+
+                <TextView
+                    android:id="@+id/tabs_count_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1 open tab"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btn_new_tab"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_add"
+                    android:contentDescription="@string/action_new_tab"
+                    app:tint="@color/icon_default" />
+
+                <ImageButton
+                    android:id="@+id/btn_done"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_check"
+                    android:contentDescription="@string/action_done"
+                    app:tint="@color/accent_blue" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tab_cards_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:padding="12dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
