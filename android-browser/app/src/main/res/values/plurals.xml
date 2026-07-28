@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="open_tabs_plural">
+        <item quantity="one">%d open tab</item>
+        <item quantity="other">%d open tabs</item>
+    </plurals>
+</resources>

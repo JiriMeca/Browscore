@@ -1,0 +1,17 @@
+# Build artifacts
+.gradle/
+build/
+app/build/
+local.properties
+*.iml
+.idea/
+captures/
+.cxx/
+
+# Keystores (never commit these)
+*.keystore
+*.jks
+
+# OS files
+.DS_Store
+Thumbs.db

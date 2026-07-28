@@ -1,0 +1,11 @@
+# Copy this file to "local.properties" and edit the path below to point
+# to YOUR Android SDK installation folder on Windows.
+#
+# Example (default Android Studio location):
+#   sdk.dir=C\:\\Users\\YourName\\AppData\\Local\\Android\\Sdk
+#
+# Example (command-line-only install):
+#   sdk.dir=C\:\\Android\\Sdk
+#
+# IMPORTANT: On Windows the backslashes must be escaped as \\ in this file.
+sdk.dir=C\:\\Android\\Sdk

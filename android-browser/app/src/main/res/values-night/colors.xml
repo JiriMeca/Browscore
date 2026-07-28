@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Override settings-related colors in dark mode -->
+    <color name="browser_bg">#202124</color>
+    <color name="settings_card_bg">#2D2E30</color>
+    <color name="settings_row_pressed">#3C4043</color>
+    <color name="divider">#3C4043</color>
+    <color name="text_primary">#E8EAED</color>
+    <color name="text_secondary">#9AA0A6</color>
+    <color name="text_hint">#5F6368</color>
+    <color name="icon_default">#9AA0A6</color>
+    <color name="accent_blue">#8AB4F8</color>
+    <color name="tab_card_bg">#2D2E30</color>
+
+    <color name="status_default_bg">#1E3A2A</color>
+    <color name="status_default_text">#81C995</color>
+    <color name="status_notset_bg">#2D2E30</color>
+    <color name="status_notset_text">#9AA0A6</color>
+
+    <color name="warning_bg">#3E2A00</color>
+    <color name="warning_text">#FCD663</color>
+    <color name="secure_green">#81C995</color>
+
+    <!-- Launcher icon background (Chromium blue) -->
+    <color name="ic_launcher_background">#4285F4</color>
+</resources>
